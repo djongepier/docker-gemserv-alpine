@@ -1,0 +1,16 @@
+---
+version: "3.7"
+services:
+        gemserv:
+                image: djongepier/gemserv-alpine:arm64
+                container_name: gemserv
+                environment:
+                        - TZ=Europe/Amsterdam
+                volumes:
+                        - /path/to/your/cert:/etc/cert/cert.pem
+                        - /path/to/your/cert:/etc/cert/key.pem
+                        - /path/to/configfile/:/gemserv
+                        - /path/to/geminifiles/:/gemroot
+                ports:
+                        - 1965:1965
+                restart: unless-stopped
