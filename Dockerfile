@@ -1,4 +1,4 @@
-FROM alpine:latest as builder
+FROM alpine:3.13 as builder
 RUN apk update \
       && apk upgrade
 RUN apk add --no-cache rust cargo openssl openssl-dev
