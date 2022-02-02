@@ -7,7 +7,7 @@ RUN cargo install \
       gemserv
 
 FROM alpine:latest as gemserv
-LABEL Author="Daniel Jongepier <daniel@famjongepier.nl>"
+LABEL Author="Daniel Jongepier <daniel@gmail.com>"
 RUN apk update \
       && apk upgrade
 RUN apk add --no-cache openssl libgcc
